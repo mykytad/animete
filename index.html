@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<style>
+		body{
+			background: gray;
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			position: relative;
+			width: 1200px;
+			height: 600px;
+			margin: 0 auto;
+			background: pink;
+		}
+		.container:hover .some{
+			animation: some_animete 5s linear infinite alternate;
+		}
+		.some{
+			position: absolute;
+			left:0;
+			top:0;
+			width: 100px;
+			height:100px;
+			background: black;
+			border:2px solid white;
+			animation: some_animete 10s linear infinite  paused;
+		}
+		@keyframes some_animete {
+			0%{
+				left:0;
+				top:0;
+			}
+			12%{
+				left:0;
+				top:calc(50% - 50px);
+				transform:rotateZ(360deg);
+				background: gray;
+			}
+			24%{				
+				left:0;
+				top:500px;
+				background: red;
+				transform:rotateZ(-360deg);
+			}
+			36%{
+				top:500px;
+				left:calc(50% - 50px);
+				transform:rotateX(360deg);
+				background: pink;
+			}
+			48%{
+				left:1100px;
+				top:500px;
+				transform:rotateX(-360deg);
+				background: yellow;
+			}
+			60%{
+				left:1100px;
+				top:500px;
+				transform:rotateY(360deg);
+				background: yellow;
+			}
+			72%{
+				left:1100px;
+				top:calc(50% - 50px);
+				transform:rotateY(-360deg);
+				background: aqua;
+			}
+			84%{
+				left:1100px;
+				top:0;
+				transform:rotate(360deg);
+				background: lightgreen;
+			}
+			96%{
+				left:calc(50% - 50px);
+				top:0;
+				transform:rotate(-360deg);
+				background: purple;
+			}
+			100%{
+				left:0;
+				top:0;
+				background: transparent;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="some"></div>
+	</div>
+</body>
+</html>
+<!-- 
+			/*1%{
+				width: 150px
+				height:150px;*/
+			}
+/*			5%{
+				width: 200px;
+				height: 200px;
+				left: 50px;
+				top:100px;
+			}*/
+/*			50%{
+				left:250px;
+				top:400px;
+				background: gray;
+				border:none;
+				transform:rotateZ(360deg);
+			}
+			75%{
+				left:300px;
+				top:500px;
+				transform:rotateY(360deg);
+			}
+			100%{
+				left:450px;
+				top:0;
+			}*/ -->
